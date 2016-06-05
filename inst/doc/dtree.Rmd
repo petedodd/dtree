@@ -13,6 +13,10 @@ vignette: >
 knitr::opts_chunk$set(cache=FALSE)
 ```
 
+#Note
+
+This vignette is a work in progress...
+
 #Introduction
 
 - decision trees in HEE & other packages
@@ -25,9 +29,7 @@ knitr::opts_chunk$set(cache=FALSE)
 
 #Installation
 
-todo
-
-Install `devtools` via `install.packages('devtools')` if needed.
+Install `devtools` by typing `install.packages('devtools')` if needed.
 
 Then type
 
