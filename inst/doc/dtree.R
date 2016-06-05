@@ -1,6 +1,9 @@
 ## ----setup, include=FALSE------------------------------------------------
 knitr::opts_chunk$set(cache=FALSE)
 
+## ----eval=FALSE----------------------------------------------------------
+#  devtools::install_github('petedodd/dtree',dependencies=TRUE,build_vignettes=TRUE)
+
 ## ----eval=TRUE-----------------------------------------------------------
 library(dtree)
 

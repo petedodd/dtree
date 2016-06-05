@@ -27,6 +27,15 @@ knitr::opts_chunk$set(cache=FALSE)
 
 todo
 
+Install `devtools` via `install.packages('devtools')` if needed.
+
+Then type
+
+```{r,eval=FALSE}
+devtools::install_github('petedodd/dtree',dependencies=TRUE,build_vignettes=TRUE)
+```
+
+
 #Use
 
 ```{r,eval=TRUE}
