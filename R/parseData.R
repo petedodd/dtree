@@ -2,6 +2,7 @@
 ## parse the string and extract the data
 parseData <- function(x){
     lnz <- unlist(strsplit(trim(x),split='\n')) #lines
+    lnz <- lnz[lnz!=""]               #ditch empty lines
     lnz <- unlist(lapply(as.list(lnz),FUN=function(x) unlist(strsplit(x,split="\\\\"))[1] )) ## strip comment
     lnz <- trimall(lnz)
     lnz <- lnz[lnz!=""]                 #ditch empty lines
