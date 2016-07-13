@@ -18,7 +18,7 @@ knitr::opts_chunk$set(cache=FALSE)
 This vignette is a work in progress...
 
 TODO:
-- skeleton export for tree to DOT
+- currently the dot strings need search/replace "" to '' to be valid DOT having written out with `cat()`
 
 #Introduction
 
