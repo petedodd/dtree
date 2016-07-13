@@ -17,6 +17,9 @@ knitr::opts_chunk$set(cache=FALSE)
 
 This vignette is a work in progress...
 
+TODO:
+- skeleton export for tree to DOT
+
 #Introduction
 
 - decision trees in HEE & other packages
