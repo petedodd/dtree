@@ -30,3 +30,4 @@ parseData <- function(x){
 ## trimming utility functions
 trim <- function (x) gsub("^\\s+|\\s+$", "", x)
 trimall <- function (x) gsub("\\s+", "", x)
+gfun <- function(x) gsub( "[:space:]*\\|.*'[:space:]*]","']",x) #for dropping Q/C

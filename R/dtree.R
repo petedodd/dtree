@@ -12,6 +12,7 @@
 ##'   \item \code{qolfun} - function for calculating QoL for model
 ##'   \item \code{root} - string identifying the root of model
 ##'   \item \code{dot} - string in DOT language for export and visualization
+##'   \item \code{dotc} - string in DOT language for export and visualization (cost/qol node info dropped for conceptual overview)
 ##'   \item \code{inputstring} - the string used as input.
 ##' }
 ##' @author Pete Dodd
@@ -19,6 +20,7 @@
 ##' @export
 dtree <- function(ss,view=TRUE){
     ssv <- wrap4diag(ss)                #graph code
+    ssc <- paste( unlist(lapply( unlist(strsplit(trim(ssv),split='\n')), gfun)), collapse='\n')  #conceptual graph code
     if(view)
         return(DiagrammeR::grViz( ssv ))               #visualize
     anso <- parseData(ss)               #preprocess
@@ -34,5 +36,6 @@ dtree <- function(ss,view=TRUE){
          qolfun=myQfun,
          root=ansl$root,
          dot=ssv,
+         dotc=ssc,
          inputstring=ss)
 }

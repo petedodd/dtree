@@ -10,6 +10,7 @@
 wrap4diag <- function(x){
     ## get rid of comments
     lnz <- unlist(strsplit(trim(x),split='\n')) #lines
+    lnz <- lnz[lnz!=""]               #ditch empty lines
     lnz <- unlist(lapply(as.list(lnz),FUN=function(x) unlist(strsplit(x,split="\\\\"))[1] )) ## strip comment
     x <- paste0(lnz,collapse="\n")
     ## top/tail and substitute
