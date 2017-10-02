@@ -10,11 +10,11 @@
 ##' @export
 makeTree <- function(nm,x){
     tree <- list()
-    tree[[nm]] <- list(n=x[[nm]]$n,
-                       c=x[[nm]]$c,
-                       q=x[[nm]]$q,
-                       p=x[[nm]]$p,
-                       k=list()
+    tree[[nm]] <- list(n=x[[nm]]$n, #names
+                       c=x[[nm]]$c, #cost
+                       q=x[[nm]]$q, #qol
+                       p=x[[nm]]$p, #prob
+                       k=list()     #kids
                        )
     for(K in x[[nm]]$k)                 #recurse for children
         tree[[nm]]$k <- c(tree[[nm]]$k,makeTree(K,x=x))
